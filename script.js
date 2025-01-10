@@ -27,7 +27,7 @@ const levels = [
   }
 ];
 
-function initializeGame() {
+function start() {
   document.querySelector('img').src = levels[currentLevel].image;
   document.getElementById('desc').textContent = levels[currentLevel].desc;
   document.getElementById('msg').textContent = '';
@@ -49,7 +49,7 @@ document.getElementById('btn').addEventListener('click', function () {
 
     if (currentLevel < levels.length) {
       setTimeout(() => {
-        initializeGame();
+        start();
       }, 2000);
     } else {
       document.querySelector('img').src = '4.png';
@@ -58,13 +58,13 @@ document.getElementById('btn').addEventListener('click', function () {
       );
       currentLevel = 0;
       setTimeout(() => {
-        initializeGame();
+        start();
       }, 3000);
     }
   } else if (guess > randomNumber) {
-    display('Too high! Try again.');
+    display('Too High. Try again');
   } else {
-    display('Too low! Try again.');
+    display('Too low. Try again');
   }
 });
 
@@ -72,4 +72,4 @@ function display(msg) {
   document.getElementById('msg').textContent = msg;
 }
 
-initializeGame();
+start();
