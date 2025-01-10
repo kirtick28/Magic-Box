@@ -1,10 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  height: 100vh;
+  height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,11 +31,10 @@ h3 {
 input {
   width: 80%;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 16px;
   border: 2px solid #ddd;
   border-radius: 5px;
   margin-bottom: 20px;
-  outline: none;
 }
 
 button {
